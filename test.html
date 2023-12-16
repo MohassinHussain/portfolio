@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            
+            
+        }
+        ul li {
+            display: inline;
+        }
+        ul li a{
+            text-decoration: none;  
+        }
+        ul .dropdown {
+            
+            width: 100%;
+            display: block;
+            height: 30px;
+        }
+        ul .dropdown li {
+            display: none;
+        }
+        
+        ul .dropdown:hover {
+            background-color: red;
+            width: 30px;
+            padding: 10px;
+            color: yellow;
+        }
+        ul .dropdown:hover li{
+            display: block;
+        }
+        
+    </style>
+    
+    
+</head>
+<body>
+    <ul>
+        <ul class="dropdown">Things</li>
+        <li><a href="#">This</a></li>
+        <li><a href="#">This</a></li>
+        <li><a href="#">That</a></li>
+    </ul>
+</body>
+</html>

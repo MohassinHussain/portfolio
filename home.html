@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+
+            background-image: url('/storage/emulated/0/Download/images (13).jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+
+        }
+
+
+        /* header {
+            background-color: #2196F3;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        } */
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+            height: 3px;
+            width: 25px;
+            background-color: #fff;
+            margin: 5px 0;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 15px;
+            padding: 5px;
+        }
+
+        .menu-toggle i:hover {
+            color: red;
+            background-color: yellow;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+
+        }
+
+        nav a:hover {
+            background-color: red;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+
+
+
+        section {
+            padding: 2em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: left;
+                width: 30%;
+                border-radius: 10px;
+                
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: cyan;
+                margin-left: 10px;
+            }
+            nav ul li a{
+                color: red;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        header h1 {
+            animation: heading 1s;
+        }
+
+        @keyframes heading {
+            0% {
+                color: red;
+            }
+
+            50% {
+                color: green;
+            }
+
+            100% {
+                color: rgb(246, 213, 213)smoke;
+            }
+        }
+
+        .main {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+        }
+
+        .main h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-size: 80px;
+            margin: 20%;
+            color: #eba6cb;
+            text-align: center;
+            border-radius: 20px;
+
+            background-color: white;
+
+            animation: myName 3s infinite ease-in-out;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .main {
+                margin: 20%;
+            }
+
+            .main h1 {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bolder;
+                font-size: 50px;
+                text-align: center;
+                border-radius: 20px;
+                margin: 20%;
+                color: #eba6cb;
+
+
+                background-color: white;
+
+                animation: myName 3s infinite ease-in-out;
+                animation-timing-function: linear;
+            }
+        }
+
+        @keyframes myName {
+            from {
+                color: #eba6cb;
+                text-shadow: 0 0 0 currentColor;
+                transform: rotatey(45deg);
+
+                background-color: tomato;
+            }
+
+            to {
+                color: #eba6cb;
+                text-shadow: 0 0 10px currentColor;
+                transform: rotatey(-45deg);
+            }
+        }
+
+        /*.main img{
+            width: 500px;
+            height: 1080px;
+        }*/
+
+        .foot {
+
+            border-radius: 20px;
+            height: 150px;
+            width: 200px;
+            margin: 10px;
+            padding: 5px;
+            margin-left: 40%;
+            margin-bottom: 100px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .foot {
+
+
+                height: 150px;
+                width: 200px;
+                margin: 10px;
+                padding: 5px;
+                margin-left: 30%;
+                margin-top: 100px;
+            }
+        }
+
+        .social {
+            /* font: monospace;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 250px;
+            background-color: #f2c6de;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin: auto; */
+
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #e389b9;
+            width: 200px;
+            border-radius: 10px;
+
+        }
+
+        .social h2 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .social a {
+            text-decoration: none;
+            color: black;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- <h1>Portfolio @mohasssin_hussain</h1> -->
+
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="#social">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="myUsername">
+            <h2>@mohassin_hussain</h2>
+        </div>
+
+    </header>
+    <div class="main">
+
+        <h1><i>I'm MOHASSIN HUSSAIN</i></h1>
+
+    </div>
+
+
+    <section id="foot" class="foot">
+        <div id="social" class="social">
+            <h2>Connections:</h2>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-discord"></i></a>
+            <a href="#"><i class="fa-brands fa-telegram"></i></a>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2023 Portfolio @mohasssin_hussain</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu');
+            const navMenu = document.querySelector('nav ul');
+
+            mobileMenuButton.addEventListener('click', function () {
+                navMenu.classList.toggle('show');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

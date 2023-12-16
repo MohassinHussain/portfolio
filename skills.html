@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+
+            background-image: url('/storage/emulated/0/Download/images (12).jpeg');
+           /* background-image: url('portBg.avif');*/
+            background-repeat: no-repeat;
+            background-size: cover;
+          /*   position: relative; */
+           /* position: fixed; */
+           
+           
+        }
+
+
+        /* header {
+            background-color: #2196F3;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        } */
+
+        header {
+        
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        /*.menu-toggle span {
+            display: block;
+            height: 3px;
+            width: 25px;
+            background-color: #fff;
+            margin: 5px 0;
+        } */
+
+        nav {
+            display: flex;           
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .menu-toggle i:hover {
+            color: red;
+            background-color: yellow;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+
+        }
+
+        nav a:hover {
+            background-color: yellow;
+            padding: 5px;
+            border-radius: 10px;
+            color: red;
+        }
+
+
+        section {
+            padding: 2em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 768px) {
+        
+        
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: left;
+                width: 30%;
+                border-radius: 10px;
+                
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: cyan;
+                margin-left: 10px;
+            }
+            nav ul li a{
+                color: red;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        header h1 {
+            animation: heading 1s;
+        }
+
+        @keyframes heading {
+            0% {
+                color: red;
+            }
+
+            50% {
+                color: green;
+            }
+
+            100% {
+                color: rgb(246, 213, 213)smoke;
+            }
+        }
+
+
+        /* 4tyuikkkkkk */
+
+        .skills {
+            margin-top: 50px;
+        }
+
+
+        .skills h2 {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: cyan;
+            width: 180px;
+            border-radius: 10px;
+
+            animation-name: slideSkills;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-delay: 1s;
+        }
+
+        @keyframes slideSkills {
+            from {
+                width: 40%;
+                background-color: #288ba8;
+            }
+
+            to {
+                width: 180px;
+                background-color: #9ad8eb;
+            }
+        }
+
+
+        .skills main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .skills .btn1 {
+            width: 150px;
+            height: 75px;
+            background-color: #ed638a;
+            margin: 5px;
+            border-radius: 15px;
+            border: 2px solid black;
+            display: block;
+        }
+
+        .skills .btn1 img {
+            width: 30px;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-top: 0px;
+            margin-left: 50px;
+            border-radius: 10px;
+        }
+
+
+        @media (max-width: 768px) {
+            .skills .btn1 {
+                width: 100px;
+                height: 50px;
+            }
+
+            .skills .btn1 img {
+                width: 30px;
+                height: 30px;
+                margin-top: 0px;
+                margin-left: 30px;
+            }
+        }
+
+
+
+        /*
+          .drop-content p {
+            background-color: white;
+            text-align: left;
+            padding: 5px;
+            width: 25%;
+            border-radius: 5px;
+        }
+        .drop-content p{
+            display: none;
+        }
+
+        .drop-content:hover p{
+            display: flex;
+        }
+        */
+
+        .btn1 p {
+            display: none;
+        }
+
+        .btn1:hover img {
+            margin: 0;
+            border: 2px solid grey;
+        }
+
+        .btn1:hover {
+            width: 200px;
+            height: 250px;
+            animation: after-hover;
+            animation-duration: 2s;
+            
+        }
+
+        .btn1:hover p {
+            display: block;
+            text-align: left;
+            font-size: medium;
+            font-weight: bold;
+        }
+        
+        
+       @keyframes after-hover {
+            
+       }
+
+
+
+
+        .skills .row2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .skills .btn2 {
+            width: 150px;
+            height: 75px;
+            background-color: rgb(165, 144, 42);
+            margin: 5px;
+            animation: pulse .8s infinite ease-in-out;
+            border-radius: 15px;
+            border: 2px solid black;
+            display: block;
+        }
+
+        .skills .btn2 img {
+            width: 30px;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .skills .btn2 {
+                width: 100px;
+                height: 50px;
+            }
+
+            .skills .btn2 img {
+                width: 30px;
+                height: 30px;
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+        }
+
+
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+
+        .btn2 p {
+            display: none;
+        }
+
+        .btn2:hover img {
+            margin: 0;
+            border: 2px solid grey;
+        }
+
+        .btn2:hover {
+            width: 200px;
+            height: 250px;
+        }
+
+        .btn2:hover p {
+            display: block;
+            text-align: left;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+
+
+
+
+        .project {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: cyan;
+            width: 220px;
+            border-radius: 10px;
+
+            animation-name: pojectAnime;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-delay: 1s;
+        }
+
+        @keyframes pojectAnime {
+            from {
+                width: 50%;
+                background-color: #288ba8;
+            }
+
+            to {
+                width: 220px;
+                background-color: #9ad8eb;
+            }
+        }
+
+
+        /* xyxyvivibo */
+
+        .projects main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .projects .box {
+           
+            
+            
+            
+            width: 300px;
+            height: 300px;
+            background-color: tifanny;
+            margin: 5px;
+            border-radius: 15px;
+            border: 2px solid black;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .projects .box {
+                width: 200px;
+                height: 100px;
+            }
+        }
+
+        .projects .row2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*.projects .box2 {
+            width: 300px;
+            height: 300px;
+            background-color: brown;
+            margin: 5px;
+            animation: pulse 1s infinite ease-in-out;
+            border-radius: 15px;
+            
+            display: block;
+        }*/
+
+        /* @media (max-width: 768px) {
+            .projects .box2 {
+                width: 200px;
+                height: 100px;
+            }
+        }
+
+
+
+
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }*/
+
+
+        #foot {
+            background-color: #288ba8;
+            border-radius: 20px;
+            height: 150px;
+            width: 200px;
+            margin: 10px;
+            padding: 5px;
+            margin-left: auto;
+            
+        }
+
+        .social {
+            /* font: monospace;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 250px;
+            background-color: #f2c6de;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin: auto; */
+
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #e389b9;
+            width: 200px;
+            border-radius: 10px;
+            
+        }
+
+        .social h2 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .social a {
+            text-decoration: none;
+            color: black;
+            margin: 5px;
+        }
+
+
+        footer {
+            position: fixed;
+            background-color: #2196F3;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <!-- <h1>Portfolio @mohasssin_hussain</h1> -->
+
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="#social">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="myUsername">
+            <h2>@mohassin_hussain</h2>
+        </div>
+
+    </header>
+
+    <div class="skills">
+        <h2><i>The Skills...</i></h2>
+        <main>
+
+            <button class="btn1"><img src="cLogo.png" alt="">
+                <p>This is C</p>
+                <p>This is C</p>
+                <p>This is C</p>
+                <p>This is C</p>
+                <p>This is C</p>
+                <p>This is C</p>
+            </button>
+            <button class="btn1"><img src="cppLogo.png" alt="">
+                <p>This is C++</p>
+                <p>This is C++</p>
+                <p>This is C++</p>
+                <p>This is C++</p>
+                <p>This is C++</p>
+                <p>This is C++</p>
+            </button>
+            <button class="btn1"><img src="pyLogo.jpeg" alt="">
+                <p>This is Python</p>
+                <p>This is Python</p>
+                <p>This is Python</p>
+                <p>This is Python</p>
+                <p>This is Python</p>
+                <p>This is Python</p>
+            </button>
+
+
+        </main>
+
+
+
+        <div class="row2">
+            <button class="btn1"><img src="hcjsLogo.png" alt="">
+                <p>This is web Front</p>
+                <p>This is web Front</p>
+                <p>This is web Front</p>
+                <p>This is web Front</p>
+                <p>This is web Front</p>
+                <p>This is web Front</p>
+            </button>
+            <button class="btn2"><img src="hcjsLogo.png" alt="">
+                <p>These are yet to learn</p>
+                <p>These are yet to learn</p>
+                <p>These are yet to learn</p>
+                <p>These are yet to learn</p>
+                <p>These are yet to learn</p>
+                <p>These are yet to learn</p>
+            </button>
+            <button class="btn2"><img src="hcjsLogo.png" alt="">
+                <p>These are yet to learn</p>
+                <p>These are yet to learn</p>
+                <p>These are yet to learn</p>
+                <p>These are yet to learn</p>
+                <p>These are yet to learn</p>
+                <p>These are yet to learn</p>
+            </button>
+        </div>
+    </div>
+
+    <div class="project">
+        <h1><i>The Projects..</i></h1>
+    </div>
+
+
+    <div class="projects">
+        <main>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </main>
+
+
+        <div class="row2">
+            <div class="box"></div>
+
+        </div>
+    </div>
+
+
+
+    <section id="foot" class="foot">
+        <div id="social" class="social">
+            <h2>Connections:</h2>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-discord"></i></a>
+            <a href="#"><i class="fa-brands fa-telegram"></i></a>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2023 Portfolio @mohasssin_hussain</p>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu');
+            const navMenu = document.querySelector('nav ul');
+
+            mobileMenuButton.addEventListener('click', function () {
+                navMenu.classList.toggle('show');
+            });
+        });
+
+        function myFunction() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+
+
+    </script>
+
+</body>
+
+</html>
